@@ -1,0 +1,26 @@
+/* Utilities */
+.d_inline {
+  display: inline-block;
+  position: relative;
+}
+
+/* properties */
+.container {
+  height: 500px;
+}
+
+.booleanLogo {
+  width: 400px;
+}
+
+.userInput {
+  width: 400px;
+}
+
+.inputGroup {
+  margin-top: 50px;
+}
+
+.green {
+  background-color: green;
+}
