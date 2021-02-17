@@ -3,27 +3,36 @@ const toDoApp = new Vue ({
   data: {
     logoImg: "https://images.corsidia.com/schools/logos/000/000/263/original/logo.png?1552646804",
     userInputArr: [],
-    greenItems: [],
     userText: '',
-    isActive: false
+    isActive: false,
+    notActive: false
   },
   methods: {
-    pushingInputArr: function () {
-      this.userInputArr.push(this.userText),
-      this.userText = ''
+    pushingInputArr () {
+      this.userInputArr.push({
+        text: this.userText,
+        isActive: this.isActive,
+      }),
+      this.userText = '';
+      console.log(this.userInputArr);
     },
-    deleteInput: function (index) {
-      this.userInputArr.splice(index, 1);
+
+    deleteInput(index) {
+            this.userInputArr.splice(index, 1);
     },
-    printGreen: function () {
-      if(this.isActive == false) {
-        this.isActive = true;
-        greenItems.push(this.isActive);
+
+    printGreen(index) {
+
+      console.log(this.userInputArr);
+
+      if (this.userInputArr[index].isActive === false) {
+        this.userInputArr[index].isActive = true;
       } else {
-        this.isActive = false;
+        this.userInputArr[index].isActive = false;
       }
-
-
     }
   }
+
+
 });
+
